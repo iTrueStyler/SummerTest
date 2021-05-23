@@ -4,16 +4,17 @@ import logo from "../../assets/octocat.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { getUsers } from "../../redux/actions/users";
 import { NavLink } from "react-router-dom";
+import { getRepos } from "../../redux/actions/repos";
 
 const Header = () => {
   const [searchValue, setSearchValue] = useState();
   const dispatch = useDispatch();
-  const users = useSelector((state) => state.users.userItems);
 
   function userHandler() {
     dispatch(getUsers(searchValue));
+    dispatch(getRepos(searchValue));
   }
-  console.log(users);
+
   return (
     <div className="header">
       <div className="header__container">

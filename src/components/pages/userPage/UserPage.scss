@@ -1,0 +1,36 @@
+.usercontainer {
+  max-width: 1280px;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .userinfo {
+    .userinfo-follows {
+      display: flex;
+      align-items: center;
+      margin-right: 5px;
+      .userinfo-follows__img {
+      }
+      .userinfo__followers {
+        margin-right: 25px;
+      }
+    }
+    .user-info__avatar {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      .user-info__avatar-img {
+        width: 280px;
+        height: 280px;
+        border-radius: 100%;
+      }
+    }
+    .userinfo__nickname {
+      font-family: Inter;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 130%;
+    }
+  }
+}
+// /-------------------/
