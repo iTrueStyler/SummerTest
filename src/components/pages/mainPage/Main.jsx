@@ -1,6 +1,6 @@
 import React from 'react'
 import "./main.scss"
-import searchLogo from '../../assets/find.svg'
+import searchLogo from '../../../assets/find.svg'
 const Main = () => {
    return (
       <div className="main">

@@ -1,13 +1,17 @@
 import React from "react";
+import { BrowserRouter, Redirect, Route } from "react-router-dom";
 import Header from "./header/Header";
-import Main from "./main/Main";
+import Main from "./pages/mainPage/Main";
+import UserPage from "./pages/userPage/UserPage";
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <Header />
-      <Main />
-    </div>
+      <Route exact path='/'component={Main}/>
+      <Route path='/user' component={UserPage}/>
+      {/* <Redirect to='/'/> */}
+    </BrowserRouter>
   );
 }
 
