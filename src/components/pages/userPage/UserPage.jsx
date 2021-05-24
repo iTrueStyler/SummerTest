@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import "./UserPage.scss";
@@ -6,12 +6,13 @@ import "./UserPage.scss";
 import followersLogo from "../../../assets/shared.svg";
 import followedLogo from "../../../assets/provate.svg";
 import RepoCard from "../../repoCard/RepoCard";
+import Loader from "../../loader/Loader";
+
 const UserPage = () => {
   const users = useSelector((state) => state.users.userItems);
   const repos = useSelector((state) => state.repos.reposItems);
+  const isFetching = useSelector((state) => state.repos.isFetching);
 
-  console.log("render", repos);
-  console.dir(repos);
   return (
     <div className="userpage">
       <div className="usercontainer">
@@ -25,7 +26,9 @@ const UserPage = () => {
           </div>
           <div className="userinfo__nickname">{users.name}</div>
           <div className="user_info__link">
-            <a href={users.html_url}>{users.login}</a>
+            <a href={users.html_url} target="_blank">
+              {users.login}
+            </a>
           </div>
           <div className="userinfo-follows">
             <div className="userinfo__followers">
@@ -40,13 +43,24 @@ const UserPage = () => {
         </div>
         <div className="repoinfo">
           <div className="repoinfo__count">
-            repositories: {users.public_repos}
+            Repositories (
+            {users.public_repos === 0 ? (
+              <div>no repos</div>
+            ) : (
+              users.public_repos
+            )}
+            )
           </div>
+
           <div className="repoinfo__cards">
-            {repos.map((repo) => (
-              <RepoCard repos={repo} />
-            ))}
+            {isFetching === false ? (
+              repos.map((repo) => <RepoCard repos={repo} />)
+            ) : (
+              <Loader />
+            )}
           </div>
+
+          {/* PAGINATION */}
         </div>
       </div>
     </div>

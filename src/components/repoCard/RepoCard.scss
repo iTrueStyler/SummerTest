@@ -1,0 +1,27 @@
+.repocard {
+  padding: 10px;
+  border: 3px solid black;
+  margin: 5px 0px;
+  width: 877px;
+  height: 112px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  .repocard__namelink {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    margin-left: 35px;
+  }
+  .repocard__decription {
+    margin-left: 35px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}

@@ -4,6 +4,18 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  // /-------------/ REPOINFO
+  .repoinfo {
+    .repoinfo__count {
+      display: flex;
+      justify-content: flex-start;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 130%;
+    }
+  }
+
+  // /-------------/ USERINFO
   .userinfo {
     .userinfo-follows {
       display: flex;
@@ -34,3 +46,19 @@
   }
 }
 // /-------------------/
+.pages {
+  margin: 20px 0;
+  .page {
+    border: 1px solid gray;
+    border-radius: 100%;
+    padding: 5px 10px;
+    margin: 0 10px;
+  }
+  .currentPage {
+    border: 2px solid black;
+    border-radius: 100%;
+    padding: 5px 10px;
+    margin: 0 10px;
+    font-weight: 700;
+  }
+}

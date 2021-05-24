@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./header.scss";
 import logo from "../../assets/octocat.svg";
 import { useDispatch, useSelector } from "react-redux";
@@ -14,7 +14,10 @@ const Header = () => {
     dispatch(getUsers(searchValue));
     dispatch(getRepos(searchValue));
   }
-
+  // useEffect(() => {
+  //   dispatch(getUsers(searchValue));
+  //   dispatch(getRepos(searchValue));
+  // }, []);
   return (
     <div className="header">
       <div className="header__container">
