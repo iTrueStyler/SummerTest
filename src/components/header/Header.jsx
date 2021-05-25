@@ -14,10 +14,7 @@ const Header = () => {
     dispatch(getUsers(searchValue));
     dispatch(getRepos(searchValue));
   }
-  // useEffect(() => {
-  //   dispatch(getUsers(searchValue));
-  //   dispatch(getRepos(searchValue));
-  // }, []);
+
   return (
     <div className="header">
       <div className="header__container">

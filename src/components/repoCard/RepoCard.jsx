@@ -8,7 +8,7 @@ const RepoCard = (props) => {
   return (
     <div className="repocard">
       <div className="repocard__namelink">
-        <a target="_blank" href={repo.html_url}>
+        <a target="_blank" href={repo.html_url} >
           {repo.name}
         </a>
       </div>

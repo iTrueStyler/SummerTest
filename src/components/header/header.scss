@@ -4,6 +4,13 @@
   height: 72px;
 
   .header__container {
+    .header__button {
+      
+      border-radius: 5px;
+      height: 36px;
+      // margin-left: 25px;
+      cursor : pointer;
+    }
     height: 100%;
     max-width: 1270px;
     margin: auto;
@@ -12,6 +19,7 @@
     align-items: center;
     .header__input {
       margin-left: 22px;
+      margin-right: 22px;
 
       .header__input-input {
         //   padding: 12.5px 100px;

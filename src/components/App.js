@@ -7,14 +7,15 @@ import UserPage from "./pages/userPage/UserPage";
 
 function App() {
   const users = useSelector((state) => state.users.userItems);
-  
+
+
+
   return (
     <BrowserRouter>
       <Header />
-      
-      <Route exact path='/'component={Main}/>
-      <Route path='/user' component={UserPage}/>
-      
+      <Route exact path='/' component={Main} />
+      <Route path='/user' component={UserPage} />
+      <Redirect to="/" />
     </BrowserRouter>
   );
 }

@@ -8,6 +8,7 @@ import followedLogo from "../../../assets/provate.svg";
 import RepoCard from "../../repoCard/RepoCard";
 import Loader from "../../loader/Loader";
 
+
 const UserPage = () => {
   const users = useSelector((state) => state.users.userItems);
   const repos = useSelector((state) => state.repos.reposItems);
@@ -42,26 +43,19 @@ const UserPage = () => {
           </div>
         </div>
         <div className="repoinfo">
-          <div className="repoinfo__count">
-            Repositories (
-            {users.public_repos === 0 ? (
-              <div>no repos</div>
-            ) : (
-              users.public_repos
-            )}
-            )
-          </div>
+      <div className="repoinfo__count">
+        Repositories (
+        {users.public_repos === 0 ? <div>no repos</div> : users.public_repos})
+      </div>
 
-          <div className="repoinfo__cards">
-            {isFetching === false ? (
-              repos.map((repo) => <RepoCard repos={repo} />)
-            ) : (
-              <Loader />
-            )}
-          </div>
-
-          {/* PAGINATION */}
-        </div>
+      <div className="repoinfo__cards">
+        {isFetching === false ? (
+          repos.map((repo) => <RepoCard repos={repo} />)
+        ) : (
+          <Loader />
+        )}
+      </div>
+    </div>
       </div>
     </div>
   );
