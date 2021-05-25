@@ -1,0 +1,29 @@
+.emptyrepo {
+   height: 100vh;
+   width: 700px;
+   .emptyrepo__container {
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+   }
+   .emptyrepo__logo {
+     margin-bottom: 25px;
+     .emptyrepo__logo-img {
+       width: 64px;
+     }
+   }
+   .emptyrepo__text {
+    width: 250px;
+     color: #808080;
+     
+     height: 62px;
+     text-align: center;
+     font-family: Inter;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 22px;
+     line-height: 140%;
+   }
+ }

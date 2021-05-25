@@ -7,6 +7,8 @@ import followersLogo from "../../../assets/shared.svg";
 import followedLogo from "../../../assets/provate.svg";
 import RepoCard from "../../repoCard/RepoCard";
 import Loader from "../../loader/Loader";
+import Main from "../mainPage/Main";
+import EmptyRepo from "../emptyRepoPage/EmptyRepo";
 
 
 const UserPage = () => {
@@ -44,8 +46,7 @@ const UserPage = () => {
         </div>
         <div className="repoinfo">
       <div className="repoinfo__count">
-        Repositories (
-        {users.public_repos === 0 ? <div>no repos</div> : users.public_repos})
+        {users.public_repos === 0 ? <EmptyRepo/> : `Repositories : ${users.public_repos}`}
       </div>
 
       <div className="repoinfo__cards">

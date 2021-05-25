@@ -1,0 +1,27 @@
+.errorpage {
+   height: 100vh;
+   .errorpage__container {
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+   }
+   .errorpage__logo {
+     .errorpage__logo-img {
+       width: 64px;
+     }
+   }
+   .errorpage__text {
+     margin-top: 25px;
+     color: #808080;
+     width: 210px;
+     height: 62px;
+     text-align: center;
+     font-family: Inter;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 22px;
+     line-height: 140%;
+   }
+ }

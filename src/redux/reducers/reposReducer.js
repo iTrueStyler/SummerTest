@@ -1,14 +1,12 @@
 const SET_REPOS = "SET_REPOS";
-const SET_IS_FETCHONG="SET_IS_FETCHING";
-const SET_CURRENT_PAGE ="SET_CURRENT_PAGE";
+const SET_IS_FETCHONG = "SET_IS_FETCHING";
+const SET_FETCH_ERROR = "SET_FETCH_ERROR";
 
 
 const defaultState = {
   reposItems: [],
   isFetching: true,
-  currentPage:1,
-  perPage:4,
-  totalCount:0
+  isFetchingError: false
 };
 
 export default function reposReducer(state = defaultState, action) {
@@ -17,18 +15,18 @@ export default function reposReducer(state = defaultState, action) {
       return {
         ...state,
         reposItems: action.payload,
-        totalCount:action.payload.total_count,
-        isFetching:false
+        totalCount: action.payload.total_count,
+        isFetching: false
       }
     case SET_IS_FETCHONG:
-      return{
+      return {
         ...state,
-        isFetching:action.payload
+        isFetching: action.payload
       }
-    case SET_CURRENT_PAGE:
-      return{
+    case SET_FETCH_ERROR:
+      return {
         ...state,
-        currentPage:action.payload
+        isFetchingError: action.payload
       }
 
     default:
@@ -37,6 +35,6 @@ export default function reposReducer(state = defaultState, action) {
 }
 
 
-export const setRepos = (repos) =>({type:SET_REPOS,payload:repos});
-export const setIsFetching = (bool) =>({type:SET_IS_FETCHONG,payload:bool});
-export const setCurrentPage = (page) =>({type:SET_CURRENT_PAGE,payload:page});
+export const setRepos = (repos) => ({ type: SET_REPOS, payload: repos });
+export const setIsFetching = (bool) => ({ type: SET_IS_FETCHONG, payload: bool });
+export const setFetchingError = (bool) => ({ type: SET_FETCH_ERROR, payload: bool });
