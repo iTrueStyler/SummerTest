@@ -1,4 +1,5 @@
 Тестовое задание для SummerTest https://startup-summer-task.paralect.com/;<br/>
+Deployed on vercel: https://summer-test.vercel.app/  <br/>
 
 Используемый стек технологий:<br/>
 
